@@ -134,7 +134,7 @@
 		<repository>
 			<id>cox-bis-spring</id>
 			<name>Cox BIS Official Repository</name>
-			<url>https://repo.corp.cox.com/artifactory/bis-spring/</url>
+			<url>https://repo.maven.apache.org/maven2</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
