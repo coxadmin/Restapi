@@ -8,7 +8,7 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<properties>
-		<soapUIProjectFile>${ProjectFile}</soapUIProjectFile>
+		<soapUIProjectFile>H:/Soap_projects/SomeswarREST-S.xml</soapUIProjectFile>
 	</properties> 
 	<build>
 		<plugins>
@@ -21,7 +21,7 @@
 						<id>CreateHouse</id>
 						<!-- Change the name to identify -->
 						<configuration>
-							<projectFile>${soapUIProjectFile}</projectFile>
+							<projectFile>H:/Soap_projects/SomeswarREST-S.xml</projectFile>
 							<!-- Change the project file name -->
 							<outputFolder>target/surefire-reports</outputFolder>
 							<testSuite>TestDataCreation</testSuite>
@@ -148,11 +148,7 @@
 			<url>https://repo.corp.cox.com:443/artifactory/cox-thirdparty</url>
 		</repository>
 	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>smartbear-sweden-plugin-repository</id>
-			<url>https://repo.corp.cox.com/artifactory/soapui/</url>
-		</pluginRepository>
+	<pluginRepositories>		
 		<pluginRepository>
 			<id>ojdbc</id>
 			<name>repo.corp.cox.com-releases</name>
