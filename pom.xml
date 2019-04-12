@@ -24,7 +24,7 @@
 							<projectFile>H:/Soap_projects/Someswar/REST-S.xml</projectFile>
 							<!-- Change the project file name -->
 							<outputFolder>target/surefire-reports</outputFolder>
-							<testSuite>TestDataCreation</testSuite>
+							<testSuite>TestSuite</testSuite>
 							<!-- Change the suite name -->
 							<junitReport>true</junitReport>
 							<exportwAll>true</exportwAll>
