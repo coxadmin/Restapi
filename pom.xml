@@ -109,16 +109,5 @@
 			<id>cox-qa</id>			
 			<url>https://github.com/coxadmin/Restapi.git</url>
 		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>smartbear-sweden-plugin-repository</id>
-			<url>https://repo.corp.cox.com/artifactory/soapui/</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>ojdbc</id>
-			<name>repo.corp.cox.com-releases</name>
-			<url>https://repo.corp.cox.com:443/artifactory/cox-thirdparty</url>
-		</pluginRepository>
-	</pluginRepositories>
+	</repositories>	
 </project>
