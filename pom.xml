@@ -13,12 +13,12 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>com.smartbear.soapui</groupId>
-				<artifactId>soapui-maven-plugin</artifactId>
-				<version>5.0.0</version>
+	    <id>smartbear</id>
+        <name>smartbear repository</name>
+        <url>http://smartbearsoftware.com/repository/maven2</url>
 				<executions>
 					<execution>
-						<id>CreateHouse</id>
+						<id>REST-S</id>
 						<!-- Change the name to identify -->
 						<configuration>
 							<projectFile>H:/Soap_projects/SomeswarREST-S.xml</projectFile>
