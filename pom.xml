@@ -9,35 +9,37 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 <version>1.0-SNAPSHOT</version>
 <packaging>jar</packaging>
 <description>blah blah</description>
-<build>
-    <plugins>
-        <plugin>
-            <groupId>com.smartbear.soapui</groupId>
-            <artifactId>soapui-maven-plugin</artifactId>
-            <version>5.0.0</version>
-
-            <executions>
-                <execution>
-                    <id>RestAPI-positiveTestSuite</id>
-                    <configuration>
-                        <projectFile>H:/Soap_projects/SomeswarREST-S.xml</projectFile>
-
-                        <outputFolder>target/surefire-reports</outputFolder>
-                        <testSuite>Positive cases</testSuite>
-
-                        <junitReport>true</junitReport>
-                        <exportwAll>true</exportwAll>
-                        <printReport>true</printReport>
-                        <testFailIgnore>true</testFailIgnore>
-                    </configuration>
-                    <goals>
-                        <goal>test</goal>
-                    </goals>
-                    <phase>test</phase>
-                </execution>
-            </executions>
-			<dependencies>
-			<dependency>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.smartbear.soapui</groupId>
+				<artifactId>soapui-maven-plugin</artifactId>
+				<version>5.0.0</version>
+				<executions>
+					<execution>
+						<id>CreateHouse</id>
+						<!-- Change the name to identify -->
+						<configuration>
+							<projectFile>H:/Soap_projects/SomeswarREST-S.xml<</projectFile>
+							<!-- Change the project file name -->
+							<outputFolder>target/surefire-reports</outputFolder>
+							<testSuite>TestDataCreation</testSuite>
+							<!-- Change the suite name -->
+							<junitReport>true</junitReport>
+							<exportwAll>true</exportwAll>
+							<printReport>true</printReport>
+							<testFailIgnore>false</testFailIgnore>
+						</configuration>						
+					</execution>
+				</executions>
+				<dependencies>	
+<dependency>
+    <groupId>com.smartbear.soapui</groupId>
+    <artifactId>soapui</artifactId>
+    <version>5.2.1</version>
+    <scope>test</scope>
+</dependency>				
+					<dependency>
 						<groupId>org.codehaus.groovy</groupId>
 						<artifactId>groovy-all</artifactId>
 						<version>2.2.1</version>
@@ -46,20 +48,20 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 						<groupId>org.codehaus.groovy</groupId>
 						<artifactId>groovy-backports-compat23</artifactId>
 						<version>2.4.5</version>
-					</dependency>
+					</dependency>	
 					<dependency>
 						<groupId>org.apache.xmlbeans</groupId>
 						<artifactId>xmlbeans</artifactId>
 						<version>2.6.0</version>
 					</dependency>
-					<dependency>
-    <groupId>com.smartbear.soapui</groupId>
-    <artifactId>soapui</artifactId>
-    <version>5.2.1</version>
-    <scope>test</scope>
-</dependency>
-			</dependencies>
- <plugin>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.21.0</version>
+			</plugin>
+			<plugin>
 <groupId>com.smartbear.soapui</groupId>
 <artifactId>soapui-pro-maven-plugin</artifactId>
 <version>5.1.1</version>
@@ -78,14 +80,42 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 </dependency>
 </dependencies>
 </plugin>
-</plugins>
-</build>
-<repositories>
+		</plugins>
+	</build>
+	<repositories>
+	<repositories>
     <repository>
         <id>smartbear</id>
         <name>smartbear repository</name>
         <url>http://smartbearsoftware.com/repository/maven2</url>
     </repository>
 </repositories>
-
+		<repository>
+			<id>cox-bis-spring</id>
+			<name>Cox BIS Official Repository</name>
+			<url>https://repo.corp.cox.com/artifactory/bis-spring/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>cox-qa</id>
+			<name>repo.corp.cox.com-releases</name>
+			<url>https://repo.corp.cox.com:443/artifactory/cox-thirdparty</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>smartbear-sweden-plugin-repository</id>
+			<url>https://repo.corp.cox.com/artifactory/soapui/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>ojdbc</id>
+			<name>repo.corp.cox.com-releases</name>
+			<url>https://repo.corp.cox.com:443/artifactory/cox-thirdparty</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
