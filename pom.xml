@@ -104,22 +104,10 @@
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
+	<repositories>		
 		<repository>
-			<id>cox-bis-spring</id>
-			<name>Cox BIS Official Repository</name>
-			<url>https://repo.corp.cox.com/artifactory/bis-spring/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>cox-qa</id>
-			<name>repo.corp.cox.com-releases</name>
-			<url>https://repo.corp.cox.com:443/artifactory/cox-thirdparty</url>
+			<id>cox-qa</id>			
+			<url>https://github.com/coxadmin/Restapi.git</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
