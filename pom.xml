@@ -142,17 +142,8 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-		<repository>
-			<id>cox-qa</id>
-			<name>repo.corp.cox.com-releases</name>
-			<url>https://repo.corp.cox.com:443/artifactory/cox-thirdparty</url>
-		</repository>
 	</repositories>
-	<pluginRepositories>		
-		<pluginRepository>
-			<id>ojdbc</id>
-			<name>repo.corp.cox.com-releases</name>
-			<url>https://repo.corp.cox.com:443/artifactory/cox-thirdparty</url>
-		</pluginRepository>
+	<pluginRepositories>
+	
 	</pluginRepositories>
 </project>
