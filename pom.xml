@@ -142,6 +142,11 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+        <id>smartbear</id>
+        <name>smartbear repository</name>
+        <url>http://smartbearsoftware.com/repository/maven2</url>
+    </repository>
 	</repositories>
 	<pluginRepositories>
 	
