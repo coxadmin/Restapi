@@ -21,7 +21,7 @@
 						<id>REST-S</id>
 						<!-- Change the name to identify -->
 						<configuration>
-							<projectFile>REST-S.xml</projectFile>
+							<projectFile>H:/Soap_projects/REST-S.xml</projectFile>
 							<!-- Change the project file name -->
 							<outputFolder>target/surefire-reports</outputFolder>
 							<testSuite>TestSuite</testSuite>
