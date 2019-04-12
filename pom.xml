@@ -18,10 +18,10 @@
 				<version>5.0.0</version>
 				<executions>
 					<execution>
-						<id>CreateHouse</id>
+						<id>REST_S</id>
 						<!-- Change the name to identify -->
 						<configuration>
-							<projectFile>${soapUIProjectFile}</projectFile>
+							<projectFile>H:/Soap_projects/Someswar/REST-S.xml</projectFile>
 							<!-- Change the project file name -->
 							<outputFolder>target/surefire-reports</outputFolder>
 							<testSuite>TestDataCreation</testSuite>
@@ -29,15 +29,7 @@
 							<junitReport>true</junitReport>
 							<exportwAll>true</exportwAll>
 							<printReport>true</printReport>
-							<testFailIgnore>false</testFailIgnore>
-							<systemPropertyVariables>
-								<environment>${DataPath}</environment>
-								<emailRecipientList>${EMAIL_RECIPIENT_LIST}</emailRecipientList>
-								<buildUrl>${BUILD_URL}</buildUrl>
-							</systemPropertyVariables>
-							<environmentVariables>
-								<jbuildUrl>${BUILD_URL}</jbuildUrl>
-							</environmentVariables>
+							<testFailIgnore>false</testFailIgnore>						
 						</configuration>
 						<goals>
 							<goal>test</goal>
@@ -120,11 +112,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.21.0</version>
-				<configuration>
-				<environmentVariables>
-					<jenkins.package>${env.V_PACKAGE}</jenkins.package>
-					<jenkins.release>${env.V_RELEASE}</jenkins.release>
-				</environmentVariables>
+				<configuration>				
 				</configuration>
 
 			</plugin>
