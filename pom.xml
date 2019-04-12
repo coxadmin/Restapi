@@ -8,20 +8,20 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<properties>
-		<soapUIProjectFile>H:/Soap_projects/SomeswarREST-S.xml</soapUIProjectFile>
+		<soapUIProjectFile>${ProjectFile}</soapUIProjectFile>
 	</properties> 
 	<build>
-	 <plugins>
+		<plugins>
 			<plugin>
-	    <id>smartbear</id>
-        <name>smartbear repository</name>
-        <url>http://smartbearsoftware.com/repository/maven2</url>
+				<groupId>com.smartbear.soapui</groupId>
+				<artifactId>soapui-maven-plugin</artifactId>
+				<version>5.0.0</version>
 				<executions>
 					<execution>
-						<id>REST-S</id>
+						<id>CreateHouse</id>
 						<!-- Change the name to identify -->
 						<configuration>
-							<projectFile>H:/Soap_projects/SomeswarREST-S.xml</projectFile>
+							<projectFile>H:/Soap_projects/Someswar</projectFile>
 							<!-- Change the project file name -->
 							<outputFolder>target/surefire-reports</outputFolder>
 							<testSuite>TestDataCreation</testSuite>
@@ -29,15 +29,7 @@
 							<junitReport>true</junitReport>
 							<exportwAll>true</exportwAll>
 							<printReport>true</printReport>
-							<testFailIgnore>false</testFailIgnore>
-							<systemPropertyVariables>
-								<environment>${DataPath}</environment>
-								<emailRecipientList>${EMAIL_RECIPIENT_LIST}</emailRecipientList>
-								<buildUrl>${BUILD_URL}</buildUrl>
-							</systemPropertyVariables>
-							<environmentVariables>
-								<jbuildUrl>${BUILD_URL}</jbuildUrl>
-							</environmentVariables>
+							<testFailIgnore>false</testFailIgnore>					
 						</configuration>
 						<goals>
 							<goal>test</goal>
@@ -45,17 +37,7 @@
 						<phase>test</phase>
 					</execution>
 				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>net.sourceforge.jexcelapi</groupId>
-						<artifactId>jxl</artifactId>
-						<version>2.6.10</version>
-					</dependency>
-					<dependency>
-						<groupId>com.oracle</groupId>
-						<artifactId>ojdbc6</artifactId>
-						<version>11.1.0.7.0</version>
-					</dependency>
+				<dependencies>					
 					<dependency>
 						<groupId>org.codehaus.groovy</groupId>
 						<artifactId>groovy-all</artifactId>
@@ -65,22 +47,7 @@
 						<groupId>org.codehaus.groovy</groupId>
 						<artifactId>groovy-backports-compat23</artifactId>
 						<version>2.4.5</version>
-					</dependency>
-					<dependency>
-						<groupId>org.apache.poi</groupId>
-						<artifactId>poi</artifactId>
-						<version>3.14</version>
-					</dependency>
-					<dependency>
-						<groupId>org.apache.poi</groupId>
-						<artifactId>poi-examples</artifactId>
-						<version>3.14</version>
-					</dependency>	
-					<dependency>
-						<groupId>org.apache.poi</groupId>
-						<artifactId>poi-excelant</artifactId>
-						<version>3.14</version>
-					</dependency>
+					</dependency>					
 					<dependency>
 						<groupId>org.apache.poi</groupId>
 						<artifactId>poi-ooxml</artifactId>
@@ -106,17 +73,9 @@
 						<artifactId>xmlbeans</artifactId>
 						<version>2.6.0</version>
 					</dependency>
-					<dependency>
-						<!--<groupId>com.microsoft.sqlserver</groupId>
-						<artifactId>mssql-jdbc</artifactId>
-						<version>6.1.0.jre8</version>-->
-						<groupId>com.microsoft.sqlserver</groupId>
-						<artifactId>sqljdbc4</artifactId>
-						<version>4.0</version>
-					</dependency>
 				</dependencies>
-			
-		
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.21.0</version>
@@ -134,7 +93,7 @@
 		<repository>
 			<id>cox-bis-spring</id>
 			<name>Cox BIS Official Repository</name>
-			<url>https://repo.maven.apache.org/maven2</url>
+			<url>https://repo.corp.cox.com/artifactory/bis-spring/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -143,12 +102,20 @@
 			</snapshots>
 		</repository>
 		<repository>
-        <id>smartbear</id>
-        <name>smartbear repository</name>
-        <url>http://smartbearsoftware.com/repository/maven2</url>
-    </repository>
+			<id>cox-qa</id>
+			<name>repo.corp.cox.com-releases</name>
+			<url>https://repo.corp.cox.com:443/artifactory/cox-thirdparty</url>
+		</repository>
 	</repositories>
 	<pluginRepositories>
-	
+		<pluginRepository>
+			<id>smartbear-sweden-plugin-repository</id>
+			<url>https://repo.corp.cox.com/artifactory/soapui/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>ojdbc</id>
+			<name>repo.corp.cox.com-releases</name>
+			<url>https://repo.corp.cox.com:443/artifactory/cox-thirdparty</url>
+		</pluginRepository>
 	</pluginRepositories>
 </project>
